@@ -40,23 +40,22 @@ namespace seneca {
         }
         return *this;
     }
-  int Menu::run() const {
-    int choice;
-    cout << m_title << endl;
+    int Menu::run() const {
+        int choice;
+        cout << m_title << " " << endl;
 
+        for (int i = 0; i < m_count; i++) {
+            for (int j = 0; j < m_indent; j++) cout << ' ';
+            cout << (i + 1) << "- " << m_items[i] << endl;
+        }
 
-    for (int i = 0; i < m_count; i++) {
-        for (int j = 0; j < m_indent; j++) cout << ' ';
-        cout << (i + 1) << "- " << m_items[i] << endl;
+        for (int i = 0; i < m_indent; i++) cout << ' ';
+        cout << "0- " << m_exit << endl;
+
+        for (int i = 0; i < m_indent; i++) cout << ' ';
+        cout << "> ";
+
+        cin >> choice;
+        return choice;
     }
-
-    for (int i = 0; i < m_indent; i++) cout << ' ';
-    cout << "0- " << m_exit << endl;
-
-    for (int i = 0; i < m_indent; i++) cout << ' ';
-    cout << "> ";
-
-    cin >> choice;
-    return choice;
-}
 }

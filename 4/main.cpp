@@ -32,8 +32,7 @@ using namespace seneca;
 
 int main() {
 
-    Ordering ord("foods.csv", "drinks.csv");
-
+Ordering ord("drinks.csv", "foods.csv");
     if (!ord) {
         cout << "Failed to open data files or the data files are corrupted!" << endl;
         return 1;

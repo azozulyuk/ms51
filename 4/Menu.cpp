@@ -42,9 +42,8 @@ namespace seneca {
     }
   int Menu::run() const {
     int choice;
-
-    for (int i = 0; i < m_indent; i++) cout << ' ';
     cout << m_title << endl;
+
 
     for (int i = 0; i < m_count; i++) {
         for (int j = 0; j < m_indent; j++) cout << ' ';
